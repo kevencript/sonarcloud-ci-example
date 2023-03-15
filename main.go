@@ -8,7 +8,7 @@ import (
 func main() {
 	// Here we are just printing a random Hash in order to verify 
 	// on Go tests if everything is working fine. This way, we can
-	// implement this into the Sonarqube analysis (This is an EXAMPLE)
+	// implement this into the Sonarqube analysis (This is an EXAMPLE).
 	http.HandleFunc("/first", handlerSecondHash)
 
 
