@@ -4,7 +4,9 @@ WORKDIR /app
 
 RUN go mod init sonarqube-ci
 
-COPY . .
+COPY ./main.go .
+COPY ./main_test.go .
+COPY ./main_test.go .
 
 RUN go build -o main && \
     go clean -cache

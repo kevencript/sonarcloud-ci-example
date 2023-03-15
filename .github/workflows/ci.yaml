@@ -1,8 +1,8 @@
 name: sonarqube-code-quality
-on: 
+on:
   pull_request:
-    banches:
-      - main
+    branches:
+      - "main"
 
 jobs:
   sonarqube-code-coverage:
@@ -30,6 +30,7 @@ jobs:
   docker-build-and-push:
     name: Docker Build & Push
     runs-on: ubuntu-latest
+    needs: sonarqube-code-coverage
     steps:      
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
