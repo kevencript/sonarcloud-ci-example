@@ -17,29 +17,29 @@ For this project we are deploying an illustrative example Go app through CI/CD w
 
 [Check the ci.yml file](https://github.com/kevencript/sonarcloud-ci-example/blob/main/.github/workflows/ci.yaml)
 
-# Complete flow example
+# Complete flow example 🌊
 
 In this section we will exemplify the whole process (Creating a PR & checking the analysis result) with images
 
-## 1 - Create a PR with code changes :octocat:
+## 1 - Create a PR with code changes 
 
 * For this example we will change the Hashes (we have go function and tests to verify these hashess into the main go example. Check the file for a better understanding) as a plan to trigger the code coverage analysis and exemplify how Sonarqube can be powerful code analysis tool [(Check the PR)](https://github.com/kevencript/sonarcloud-ci-example/pull/4/files)
 > It's  important to comprehend that the Sonarcloud coverage analysis will be executed only into the changed lines of the code, in order to have the percentage of coverage code based on changes.
 
-## 2 - Wait for the CI flow 🕣
+## 2 - Wait for the CI flow 
 
 * Now that the PR was made, the Continuous Integration (CI) process will run and make the test coverage. After it, Sonarqube will scan it and provide a feedback related to bugs, security issues and coverage percent.
 
 <img src="https://imgur.com/Uj8jfUg.png" width="850px" heigth="100%">
 
-## 3 - Check for bot Sonarqube feedback comment ✅
+## 3 - Check for bot Sonarqube feedback comment 
 
-* Once the CI workflow is finished, it will automatically generate a comment with some stat analysis from Sonarqube & code coverage
+* Once the CI workflow is finished, it will automatically generate a comment with some stat analysis from Sonarqube & code coverage 🎉
 <img src="https://imgur.com/yagzZIo.png" width="850px" heigth="100%">
 > Here we can see the  Bugs, Vulnerabilities, Security Hotspot & Code Smells
 > From here, we are allowed to merge the code
 
-### 4 - Checking the Analysis on Sonarcloud UI 💻
+### 4 - Checking the Analysis on Sonarcloud UI 
 
 * Now that everything is tested and covered, we can check the analysis into the Sonarcloud UI and have access to much more information related to our code
 
