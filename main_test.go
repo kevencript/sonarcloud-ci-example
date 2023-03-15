@@ -53,7 +53,7 @@ func TestHandlerSecondHash(t *testing.T) {
 }
 
 func TestGetSecondHash(t *testing.T) {
-	expected := "0cc175b9c0f1b6a831c399e269772662"
+	expected := "0cc175b9c0f1b6a831c399e269772663"
 	result := getSecondHash()
 	if result != expected {
 		t.Errorf("getSecondHash() failed, expected %s but got %s", expected, result)
@@ -61,7 +61,7 @@ func TestGetSecondHash(t *testing.T) {
 }
 
 func TestGeFirstHash(t *testing.T) {
-	expected := "8743b52063cd84097a65d1633f5c74f6"
+	expected := "8743b52063cd84097a65d1633f5c74f7"
 	result := getFirstHash()
 	if result != expected {
 		t.Errorf("getFirstHash() failed, expected %s but got %s", expected, result)

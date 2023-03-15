@@ -18,11 +18,11 @@ func main() {
 }
 
 func getFirstHash() string {
-	return "8743b52063cd84097a65d1633f5c74f6"
+	return "8743b52063cd84097a65d1633f5c74f7"
 }
 
 func getSecondHash() string {
-	return "0cc175b9c0f1b6a831c399e269772662"
+	return "0cc175b9c0f1b6a831c399e269772663"
 }
 
 func handlerFirstHash(w http.ResponseWriter, r *http.Request) {
