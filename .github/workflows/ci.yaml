@@ -27,8 +27,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 
-  docker-build-and-push:
-    name: Docker Build & Push
+  docker-build-and-test:
+    name: Docker Build & Test
     runs-on: ubuntu-latest
     needs: sonarqube-code-coverage
     steps:      
@@ -49,7 +49,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false # We just push to code on CD process
-          tags: wesleywillians/fc2.0-ci-go:latest
+          tags: kevencript/http-go-example-sonarqube-ci:latest
 
 
 
