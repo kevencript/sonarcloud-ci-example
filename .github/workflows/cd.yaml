@@ -8,11 +8,10 @@ jobs:
   docker-build-and-push:
     name: Docker Build & Push
     runs-on: ubuntu-latest
-    needs: sonarqube-code-coverage
     steps:      
       - name: Checkout Repo
         uses: actions/checkout@master
-        
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
