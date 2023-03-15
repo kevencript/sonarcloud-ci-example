@@ -1,8 +1,8 @@
 name: sonarqube-code-quality
 on:
-  pull_request:
-    branches:
-      - "main"
+  push:
+    branches: 
+      - main
 
 jobs:
   docker-build-and-push:
