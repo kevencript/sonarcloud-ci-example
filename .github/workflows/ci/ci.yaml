@@ -1,0 +1,46 @@
+name: sonarqube-code-quality
+on: 
+  pull_request:
+    banches:
+      - main
+
+jobs:
+  code-quality-with-sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Setup Go environment
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.15
+
+      - name: Go Coverage test 
+        run: go test -coverprofile=coverage.out
+
+  checkout-and-test-coverages:
+    runs-on: ubuntu-latest
+    steps:      
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: false # We just push to code on CD process
+          tags: wesleywillians/fc2.0-ci-go:latest
+
+
+
+ 
