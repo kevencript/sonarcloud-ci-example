@@ -2,7 +2,7 @@ name: sonarqube-code-quality
 on: 
   pull_request:
     branches:
-      - "main"
+      - "!main"
 
 jobs:
   sonarqube-code-coverage:
