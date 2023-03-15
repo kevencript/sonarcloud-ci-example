@@ -1,8 +1,8 @@
 name: sonarqube-code-quality
 on: 
   pull_request:
-    banches:
-      - "!main"
+    branches:
+      - "main"
 
 jobs:
   sonarqube-code-coverage:
